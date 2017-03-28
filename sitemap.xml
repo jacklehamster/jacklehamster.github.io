@@ -174,4 +174,10 @@
   <changefreq>weekly</changefreq>
   <priority>0.64</priority>
 </url>
+<url><!--http://jacklehamster.github.io/awsome_page_with_content.html-->
+  <loc>http://jacklehamster.github.io/awsome_page_with_content.html</loc>
+  <lastmod>2017-03-10T08:31:06+00:00</lastmod>
+  <changefreq>weekly</changefreq>
+  <priority>0.64</priority>
+</url>
 </urlset>
