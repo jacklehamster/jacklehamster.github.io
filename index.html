@@ -1,3 +1,5 @@
+<head>
+<script src='header.js'></script> 
 <script>
 	const OWNER = "jacklehamster";
  	const REPO = "jacklehamster.github.io";
@@ -51,13 +53,19 @@
   		});
   }
   
+	function dump(data) {
+		const div = document.body.appendChild(document.createElement("pre"));
+		div.innerText = data;
+	}
   
   document.addEventListener("DOMContentLoaded", e => {
-       listContent(`https://api.github.com/repos/${OWNER}/${REPO}/contents`).then(console.log);
-       loadJson(`https://api.github.com/users/${OWNER}/repos`).then(console.log);
+       listContent(`https://api.github.com/repos/${OWNER}/${REPO}/contents`).then(dump);
+       loadJson(`https://api.github.com/users/${OWNER}/repos`).then(dump);
   });
   
 </script>
-
-
+</head>
+<body>
 <a href="old.index.html">old website</a>
+	
+</body>
