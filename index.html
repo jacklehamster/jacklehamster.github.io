@@ -54,10 +54,10 @@
   }
 
 	function listLinks(links) {
-		links.forEach(({name, url}) => {
+		links.forEach(({name, html_url}) => {
   		  	const div = document.body.appendChild(document.createElement("div"));
 		  	const a = document.body.appendChild(document.createElement("a"));
-			a.href = url;
+			a.href = html_url;
 			a.innerText = name;
 		});
 	}
@@ -69,6 +69,7 @@
   
   document.addEventListener("DOMContentLoaded", e => {
        listContent(`https://api.github.com/repos/${OWNER}/${REPO}/contents`).then(listLinks);
+	  document.body.appendChild(document.createElement("hr"));
        loadJson(`https://api.github.com/users/${OWNER}/repos`).then(listLinks);
   });
   
