@@ -54,7 +54,7 @@
   }
 
 	function listLinks(links) {
-		links(({name, url}) => {
+		links.forEach(({name, url}) => {
   		  	const div = document.body.appendChild(document.createElement("div"));
 		  	const a = document.body.appendChild(document.createElement("a"));
 			a.href = url;
