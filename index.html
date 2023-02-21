@@ -58,8 +58,13 @@
 		links.forEach(({name, html_url, homepage}) => {
   		  	const div = document.body.appendChild(document.createElement("div"));
 		  	const a = document.body.appendChild(document.createElement("a"));
-			a.href = homepage || html_url;
-			a.innerText = `${homepage?'🌐':'📜'} ${name}`;
+			a.href = html_url;
+			a.innerText = `📜 ${name}`;
+			if (homepage) {
+				const a = document.body.appendChild(document.createElement("a"));
+				a.href = homepage;
+				a.innerText = `🌐 ${name}`;
+			}
 		});
 	  document.body.appendChild(document.createElement("hr"));
 	}
